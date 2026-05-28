@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Secret Note ❤️</title>
+
+  <style>
+    body{
+      font-family: Arial, sans-serif;
+      background: #ffe6f0;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      height:100vh;
+      margin:0;
+    }
+
+    .box{
+      background:white;
+      padding:30px;
+      border-radius:20px;
+      text-align:center;
+      width:320px;
+      box-shadow:0 5px 20px rgba(0,0,0,0.1);
+    }
+
+    input{
+      padding:10px;
+      width:90%;
+      margin-top:10px;
+      border-radius:10px;
+      border:1px solid #ccc;
+    }
+
+    button{
+      margin-top:15px;
+      padding:10px 20px;
+      border:none;
+      background:#ff4d88;
+      color:white;
+      border-radius:10px;
+      cursor:pointer;
+    }
+
+    #note{
+      display:none;
+      margin-top:20px;
+      color:#444;
+      animation: fade 1s;
+    }
+
+    @keyframes fade{
+      from{opacity:0;}
+      to{opacity:1;}
+    }
+  </style>
+</head>
+<body>
+
+<div class="box">
+  <h2>Untuk Kamu </h2>
+  <p>Masukkan tanggal lahirmu</p>
+
+  <input type="password" id="password" placeholder="contoh: 12052005">
+
+  <br>
+  <button onclick="checkPassword()">Buka Note</button>
+
+  <div id="note">
+    <h3>Hai Lulutung</h3>
+    <p>
+     ku minta maaf jika ada salah ya sama km tung, kalo ku ada salah tolong jelasin lah, ku tau km gengsi kalo mau blg kenapa, tapi ku mohon lah jelasin ya...
+    </p>
+  </div>
+</div>
+
+<script>
+function checkPassword(){
+  const pass = document.getElementById("password").value;
+
+  // GANTI dengan tanggal lahir pacarmu
+  const correctPassword = "04062004";
+
+  if(pass === correctPassword){
+    document.getElementById("note").style.display = "block";
+  } else {
+    alert("Tanggal lahir salah 😢");
+  }
+}
+</script>
+
+</body>
+</html>
